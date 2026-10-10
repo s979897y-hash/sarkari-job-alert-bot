@@ -1,0 +1,16 @@
+name: Sarkari Job Alerts
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "30 3 * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  check-jobs:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check workflow
+        run: echo "Sarkari job alert workflow is ready"
